@@ -19,7 +19,7 @@ var total_movies = 0;
 var movies = [];
 let htmlBox = '';
 let url_string = window.location.href;
-
+ 
 /* Details about Movies */
 let moviesList = {
     totalMovies: 0,

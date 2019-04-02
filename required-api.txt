@@ -1,0 +1,2 @@
+1) I need API to fetch the ID of Movie using SLUG, otherwise it can be handle by passing ID in url,
+which has been not handled right now in current code

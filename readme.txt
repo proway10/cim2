@@ -1,0 +1,1 @@
+1) hence added ID in url because I'll need an API to fetch ID by using SLUG

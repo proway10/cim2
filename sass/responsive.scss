@@ -1,0 +1,137 @@
+ 
+$backdropBaseHeight: 150px; 
+$backdropPosterWidth: (270 * $backdropBaseHeight * 2)/400;
+
+@media (max-width: 768px){ 
+    .listing-wrapper{    
+        .col-6{
+            &:nth-child(odd){
+                padding-right: 7px;
+            }
+            &:nth-child(even){
+                padding-left: 7px;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .main-wrapper{
+        padding-top: 15px;
+    }
+
+    .listing-wrapper{   
+
+        justify-content: center;
+
+        .list-box{
+            margin-bottom: 15px;
+
+            .list-image{                
+                min-height: 236px;
+            }
+
+            .list-description{ 
+                min-height: 78px;
+
+               .list-title{
+                   font-size: 1em;
+                    line-height: 1.1em;
+                }
+            }
+        }
+    }
+
+
+
+.backdrop-wrapper{
+
+        min-height: 310px;
+
+        .backdrop-image{
+            height: 200px;
+        }
+
+        .backdrop-inner{ 
+            
+            top: 100px;
+
+            .backdrop-inner-row{  
+
+                height: 200px;
+
+                .part-1
+                {                     
+                    width: 120px;
+                    height: 180px;
+                }
+
+                .part-2{
+                    height: 100px;
+
+                    .movie-title{
+                        font-size: 1.2em;
+                    }
+
+                    .movie-release-date{
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+    .movie-data{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    %top-btns-common{
+        width: 30px;
+        height: 30px;
+        top: 6%;
+    }
+
+    .back-to-home{
+        background-size: contain;
+        left: 3%;        
+        @extend %top-btns-common;
+    }
+
+    #delete-movie{
+        left: 11%;
+        background-size: 13px;
+        @extend %top-btns-common;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+    .backdrop-wrapper{
+        min-height: ($backdropBaseHeight*3);
+
+        .backdrop-image{
+            height: ($backdropBaseHeight*2);
+        }
+
+        .backdrop-inner{
+            top: $backdropBaseHeight;
+
+            .backdrop-inner-row{
+                height: ($backdropBaseHeight*2);
+
+                .part-1{
+                    width: $backdropPosterWidth;
+                    height: ($backdropBaseHeight*2);
+                }
+
+                .part-2{
+                    height: $backdropBaseHeight;
+                }
+            }
+        }
+    }
+}
+ 

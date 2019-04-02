@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# without ID
+RewriteRule ^movie/([^/]*)$ /detail.html?slug=$1 [L]
+
+#with ID
+#RewriteRule ^movie/([^/]*)/([^/]*)$ /detail.html?slug=$1&id=$2 [L]
+
+
+</IfModule>
